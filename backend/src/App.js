@@ -1,6 +1,8 @@
 import express from 'express';
 import routes from './Routes';
 import database from './Database';
+import cors from 'cors';
+
 
 class Configure {
   constructor() {
@@ -12,6 +14,7 @@ class Configure {
 
   middlewares() {
     this.app.use(express.json());
+    this.app.use(cors());
   }
 
   routes() {
