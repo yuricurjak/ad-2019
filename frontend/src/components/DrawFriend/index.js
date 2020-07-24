@@ -9,10 +9,16 @@ export default function DrawFriend(props) {
 
   async function handleSubmit() {
     try {
-      /* const { data } = await api.post(
-        '/draw'
+      const { data } = await api.post(
+        '/draw',
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+          },
+        }
       );
-      console.log(data); */
+      console.log(data);
       setMessage('Sorteio realizado com sucesso');
       props.attUsers();
     } catch (err) {

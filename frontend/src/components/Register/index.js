@@ -16,6 +16,11 @@ export default function Register(props) {
         {
           name,
           email
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+          },
         }
       );
         console.log(data);

@@ -7,7 +7,12 @@ export default function ListUsers(props) {
   async function handleDelete(id) {
     try {
       const { data } = await api.delete(
-        `/users/${id}`
+        `/users/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+          },
+        }
       );
       console.log(data);
       props.attUsers();
