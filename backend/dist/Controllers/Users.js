@@ -26,7 +26,7 @@
     } catch (err) {
       console.log(err.message);
       return res.status(400).json({
-        description: 'Failed to list users',
+        description: 'Failed to list user',
         error: true
       });
     }
@@ -41,7 +41,7 @@
     } catch (err) {
       console.log(err.message);
       return res.status(400).json({
-        description: 'Failed to list users',
+        description: 'Failed to create user',
         error: true
       });
     }
@@ -55,7 +55,7 @@
     } catch (err) {
       console.log(err.message);
       return res.status(400).json({
-        description: 'Failed to list users',
+        description: 'Failed to update user',
         error: true
       });
     }
@@ -69,7 +69,7 @@
     } catch (err) {
       console.log(err.message);
       return res.status(400).json({
-        description: 'Failed to list users',
+        description: 'Failed to delete user',
         error: true
       });
     }
